@@ -6,11 +6,18 @@
 </head>
 <body>
     <p>{{ menu|join:' | ' }}</p>
-    <p>{{ float }}</p>
-    <p>{{ list }}</p>
-    <p>{{ set }}</p>
-    <p>{{ dict.key_1}} {{ dict.key_2 }}</p>
-    <p>{{ obj.a }}</p>
     <h1>{{ title }}</h1>
+
+<ul>
+    {% for post in posts %}
+    <li>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        {% if not forloop.last %}
+        <hr>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
 </body>
 </html>
