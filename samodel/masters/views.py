@@ -28,20 +28,8 @@ def about(request):
     return render(request, 'masters/about.html', {'title': 'О сайте'})
 
 
-def categories(request, cat_id):
-    return HttpResponse(f'<h1>Категории</h1><p>id: {cat_id}</p>')
-
-
-def categories_by_slug(request, cat_slug):
-    return HttpResponse(f'<h1>Категории</h1><p>slug: {cat_slug}</p>')
-
-
-def archive(request, year):
-    if year > 2024:
-        uri = reverse('cats', args=('music',))
-        return redirect(uri)
-
-    return HttpResponse(f'<h1>Архив по годам</h1><p>year: {year}</p>')
+def show_post(request, post_id):
+    return HttpResponse(f"Отобразение статьи с id: {post_id}")
 
 
 def page_not_found(request, exception):
