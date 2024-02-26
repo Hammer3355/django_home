@@ -1,0 +1,17 @@
+html, body {
+	font-family: 'Arial';
+	margin: 5px;
+	padding: 5px;
+	height: 100%;
+	width: 100%;
+	color: #444;
+}
+
+a {
+	color: #0059b2;
+	text-decoration: none;
+}
+a:hover {
+	color: #CC0000;
+	text-decoration: underline;
+}
